@@ -1,30 +1,39 @@
+puts 5
+puts 5.5
+puts 5.53543
+puts -5.45345
+puts 5 + 2
+puts 5 - 2
+puts 5 / 2
+puts 5 * 2
+puts 10 % 3
+puts 5 ^ 2
+puts 5**2
 
-puts "Hogwarts Academy"
-puts "Hogwarts\" Academy"
-puts "Hogwarts\nAcademy"
+num = 9
+puts num
+puts ("My Number " + num.to_s) #must convert to string
 
-phrase = "Hogwarts Academy"
-puts phrase
+num = -20
+puts num.abs()
 
-phrase2 = "Hogwarts Academy"
-puts phrase2.upcase()
+num = 20.74563
+puts num.round()
 
-phrase3 = "Hogwarts Academy"
-puts phrase3.downcase()
+num = 20.24563
+puts num.round()
 
-phrase4 = "   Hogwarts Academy   "
-puts phrase4
+num = 20.1
+puts num.ceil()
 
-phrase5 = "   Hogwarts Academy   "
-puts phrase5.strip()
+num = 20.9
+puts num.floor()
 
-puts phrase.length()
-puts phrase4.length()
-puts phrase.include? "Academy"
-puts phrase.include? "Academys"
-puts phrase[0]
-puts phrase[8]
-puts phrase[0,3]
-puts phrase.index("A")
-puts phrase.index("rts")
-puts "Academy".upcase()
+puts Math.sqrt(36)
+
+puts Math.log(1)
+
+puts 1 + 7
+puts 1.0 + 7
+puts 10 / 7
+puts 10 / 7.0
