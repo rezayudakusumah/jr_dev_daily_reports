@@ -1,3 +1,4 @@
-num = 5
-
-puts num
+puts "Mike"
+puts " is Cool"
+print "Mike"
+print " is Cool"
