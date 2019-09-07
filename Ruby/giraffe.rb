@@ -1,9 +1,18 @@
-states = {
-  1 => "PA",
-  "New York" => "NY",
-  :Oregon => "OR"
-}
 
-puts states[1]
-puts states["New York"]
-puts states[:Oregon]
+def sayhi
+  puts "Hello"
+end
+
+sayhi #calling methods
+
+def sayhi1(name, age)
+  puts ("Hello " + name + ", i am " + age.to_s) #age must convert to string inside puts
+end
+
+sayhi1("Reza", 22)
+
+def sayhi2(name="no name", age=-1)
+  puts ("Hello " + name + ", i am " + age.to_s) #age must convert to string inside puts
+end
+
+puts sayhi2
