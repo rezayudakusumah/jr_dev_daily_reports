@@ -1,36 +1,16 @@
-ismale = true
-
-if ismale
-  puts "I am a male"
-else
-  puts "I am not a male"
+def max(num1, num2, num3)
+   if num1 >= num2 and num1 >= num3
+    return num1
+   elsif num2 >= num1 and num2 >= num3
+    return num2
+   elsif num3 >= num1 and num3 >= num2
+    return num3
+  end
 end
 
-ismale = false
+puts max(100, 20, 5)
+puts max(15, 80, 3)
+puts max(1, 20, 50)
 
-if ismale
-  puts "I am a male"
-else
-  puts "i am not a male"
-end
-
-ismale = true
-istall = false
-
-if ismale and istall
-  puts "You r a tall male"
-else
-  puts "You either not male or not tall"
-end
-
-#elseif
-
-if ismale and istall
-  puts "You r a tall male"
-elsif ismale and !istall
-  puts "You r a short male"
-elsif !ismale and istall
-  puts "you r not male but a tall"
-else
-  puts "You r not male or not tall"
-end
+#operator
+# = < > <= >= !=
