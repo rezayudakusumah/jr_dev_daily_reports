@@ -1,22 +1,24 @@
-
-def sayhi
-  puts "Hello"
+def cube(num)
+  num * num * num
 end
 
-sayhi #calling methods
+puts cube(3)
 
-puts "hai"
-sayhi
-puts "hai"
-
-def sayhi1(name, age)
-  puts ("Hello " + name + ", i am " + age.to_s) #age must convert to string inside puts
+def cube(num)
+  return num * num * num
+  puts "hello" #code would not be read
 end
 
-sayhi1("Reza", 22)
+puts cube(3)
 
-def sayhi2(name="no name", age=-1)
-  puts ("Hello " + name + ", i am " + age.to_s) #age must convert to string inside puts
+def cube(num)
+  return num * num * num, 70
 end
 
-puts sayhi2
+puts cube(3)
+
+def cube(num)
+  return num * num * num, 70
+end
+
+puts cube(3)[1]
