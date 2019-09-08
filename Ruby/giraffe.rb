@@ -5,6 +5,10 @@ end
 
 sayhi #calling methods
 
+puts "hai"
+sayhi
+puts "hai"
+
 def sayhi1(name, age)
   puts ("Hello " + name + ", i am " + age.to_s) #age must convert to string inside puts
 end
