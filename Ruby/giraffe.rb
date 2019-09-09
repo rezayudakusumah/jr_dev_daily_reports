@@ -1,17 +1,19 @@
-friends = ["Kevin", "Oscar", "Andy", "Jonathan", "Eric"]
-
-for friend in friends
-  puts friend
+def pow(base_num, num_pow)
+  result = 1
+  num_pow.times do |index|
+  result = result * base_num
+  end
+  return result
 end
 
-friends.each do |friend|
-  puts friend
+puts pow(4, 3)
+
+def pow(base_num, num_pow)
+  result = 1
+  num_pow.times do #bisa tanpa variable
+  result = result * base_num
+  end
+  return result
 end
 
-for index in 0..5
-  puts index
-end
-
-8.times do |index| #can be anything
-  puts index
-end
+puts pow(4, 3)
