@@ -1,19 +1,40 @@
-def pow(base_num, num_pow)
-  result = 1
-  num_pow.times do |index|
-  result = result * base_num
-  end
-  return result
+File.open("Ruby/employees.txt", "r") do |file|
+
+  puts file
+
 end
 
-puts pow(4, 3)
+File.open("Ruby/employees.txt", "r") do |file|
 
-def pow(base_num, num_pow)
-  result = 1
-  num_pow.times do #bisa tanpa variable
-  result = result * base_num
-  end
-  return result
+  puts file.read().include? "Jim"
+
 end
 
-puts pow(4, 3)
+File.open("Ruby/employees.txt", "r") do |file|
+
+  puts file.read()
+
+end
+
+File.open("Ruby/employees.txt", "r") do |file|
+
+  puts file.readline()
+  puts file.readline()
+
+end
+
+File.open("Ruby/employees.txt", "r") do |file|
+
+  puts file.readchar()
+  puts file.readchar()
+  puts file.readchar()
+
+end
+
+File.open("Ruby/employees.txt", "r") do |file|
+
+  for line in file.readlines() #menampilkan dalam bentuk array
+    puts line
+  end
+
+end
