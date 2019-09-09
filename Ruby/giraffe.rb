@@ -1,41 +1,12 @@
 
-File.open("Ruby/employees.txt", "r") do |file|
+File.open("Ruby/employees.txt", "a") do |file|
 
-  puts file
-
-end
-
-File.open("Ruby/employees.txt", "r") do |file|
-
-  puts file.read().include? "Jim"
+  file.write("\nOscar, Accounting")
 
 end
 
-File.open("Ruby/employees.txt", "r") do |file|
+File.open("Ruby/index.html", "w") do |file|
 
-  puts file.read()
-
-end
-
-File.open("Ruby/employees.txt", "r") do |file|
-
-  puts file.readline()
-  puts file.readline()
-
-end
-
-File.open("Ruby/employees.txt", "r") do |file|
-
-  puts file.readchar()
-  puts file.readchar()
-  puts file.readchar()
-
-end
-
-File.open("Ruby/employees.txt", "r") do |file|
-
-  for line in file.readlines() #menampilkan dalam bentuk array
-    puts line
-  end
+  file.write("<h1>Hello</h1>")
 
 end
