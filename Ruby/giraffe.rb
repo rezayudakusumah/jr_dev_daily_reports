@@ -1,23 +1,34 @@
-class Student
-  attr_accessor :name, :major, :gpa
+class Question
+  attr_accessor :prompt, :answer
 
-  def initialize(name, major, gpa)
-    @name = name
-    @major = major
-    @gpa = gpa
-  end
-
-  def has_honors
-    if @gpa >= 3.5
-      return true
-    else
-      return false
-    end
+  def initialize(prompt, answer)
+    @prompt = prompt
+    @answer = answer
   end
 end
 
-student1 = Student.new("Reza", "IT", 3.6)
-student2 = Student.new("Mike", "Business", 2.5)
+p1 = "What color are apples?\n(a)Red\n(b)Blue\n(c)Pink"
+p2 = "What color are bananas?\n(a)Red\n(b)Yellow\n(c)Pink"
+p3 = "What color are pears?\n(a)Red\n(b)Blue\n(c)Green"
 
-puts student1.has_honors
-puts student2.has_honors
+questions = [
+  Question.new(p1, "a"),
+  Question.new(p2, "b"),
+  Question.new(p3, "c")
+]
+
+def run_test(pertanyaans)
+  answer = ""
+  score = 0
+
+  for pertanyaan in pertanyaans
+    puts pertanyaan.prompt
+    answer = gets().chomp()
+    if answer == pertanyaan.answer
+      score += 1
+    end
+  end
+  puts ("You got " + score.to_s + "/" + pertanyaans.length().to_s)
+end
+
+run_test(questions)
