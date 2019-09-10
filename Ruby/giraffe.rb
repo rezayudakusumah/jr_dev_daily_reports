@@ -1,34 +1,34 @@
-class Question
-  attr_accessor :prompt, :answer
+class Chef
+  def make_chicken
+    puts "The chef makes chicken"
+  end
 
-  def initialize(prompt, answer)
-    @prompt = prompt
-    @answer = answer
+  def make_salad
+    puts "The chef makes salad"
+  end
+
+  def make_balabala
+    puts "The chef makes balabala"
   end
 end
 
-p1 = "What color are apples?\n(a)Red\n(b)Blue\n(c)Pink"
-p2 = "What color are bananas?\n(a)Red\n(b)Yellow\n(c)Pink"
-p3 = "What color are pears?\n(a)Red\n(b)Blue\n(c)Green"
-
-questions = [
-  Question.new(p1, "a"),
-  Question.new(p2, "b"),
-  Question.new(p3, "c")
-]
-
-def run_test(pertanyaans)
-  answer = ""
-  score = 0
-
-  for pertanyaan in pertanyaans
-    puts pertanyaan.prompt
-    answer = gets().chomp()
-    if answer == pertanyaan.answer
-      score += 1
-    end
+class IndonesianCeff < Chef #inheritance
+  def make_chicken
+    puts "The chef makes chicken with sambel"
   end
-  puts ("You got " + score.to_s + "/" + pertanyaans.length().to_s)
+
+  def make_gehu
+    puts "The chef makes gehu"
+  end
 end
 
-run_test(questions)
+chef1 = Chef.new()
+chef1.make_salad
+chef1.make_chicken
+#chef1.make_gehu cant use make_gehu methods
+
+indonesianchef1 = IndonesianCeff.new()
+indonesianchef1.make_balabala
+
+indonesianchef1.make_chicken
+indonesianchef1.make_gehu
